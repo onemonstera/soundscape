@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Soundscapes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Your Perfect Soundscape</h1>
+        <p class="instruction">Describe what you would like to hear:</p>
+        <input type="text" id="userInput" placeholder="e.g., relaxing beach, campfire at night">
+        <button id="submitButton">Find Soundscape</button>
+
+        <div id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Finding your soundscape...</p>
+        </div>
+
+        <div id="results" style="display: none;">
+            <h2 id="trackTitle"></h2>
+            <div id="customControls">
+                <div id="playPauseIcon"></div>
+                <div id="volumeContainer">
+                    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+            <audio id="audioPlayer">
+              <source id="audioSource" src="" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <div id="notQuiteRight">
+                <h4>Not Quite Right?</h4>
+                <div id="alternatives">
+                  </div>
+                <button id="tryAgain">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
